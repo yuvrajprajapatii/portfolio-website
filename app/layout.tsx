@@ -32,6 +32,24 @@ export const metadata: Metadata = {
     "Developer",
   ],
   authors: [{ name: "Yuvraj Prajapati" }],
+  icons: {
+    // Standard favicon for browsers (ICO primary, PNG fallbacks for sizes)
+    icon: [
+      "/favicon.ico",
+      "/favicon-16x16.png",
+      "/favicon-32x32.png",
+      // Android Chrome icons (splash screen and high-res) - moved here as Icon objects
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    // Apple Touch Icon for iOS/macOS
+    apple: "/apple-touch-icon.png",
+    // Web App Manifest for PWA support
+    other: {
+      rel: "manifest",
+      url: "/site.webmanifest",
+    },
+  },
   openGraph: {
     title: "Yuvraj Prajapati | AI Researcher & Developer",
     description:
@@ -59,7 +77,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${nunito.variable} ${nunitoSans.variable}`}>
-      <body className="min-h-screen transition-colors duration-300">
+      {/* Suppress hydration warnings on <body> due to browser extensions (e.g., Bitwarden) injecting attributes */}
+      <body
+        suppressHydrationWarning
+        className="min-h-screen transition-colors duration-300"
+      >
         <ThemeProvider>
           <Header />
           <PageTransition>{children}</PageTransition>
