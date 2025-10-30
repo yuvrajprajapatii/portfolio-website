@@ -6,7 +6,17 @@ export const metadata: Metadata = {
   description: "Technical projects and development work by Yuvraj Prajapati",
 };
 
-const project = {
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  website: string;
+  caseStudy: string;
+}
+
+const project: Project = {
   id: 1,
   title: "Observer",
   description:
@@ -26,7 +36,7 @@ export default function ProjectsPage() {
         </h1>
         <p className="text-sm md:text-base text-primary-white-muted mb-12 max-w-2xl">
           Turning bold ideas into real, meaningful digital experiences.
-Every project shows a bit of my creativity, logic, and genuine passion for building things that make an impact.
+          Every project shows a bit of my creativity, logic, and genuine passion for building things that make an impact.
         </p>
       </FadeIn>
 
@@ -39,7 +49,7 @@ Every project shows a bit of my creativity, logic, and genuine passion for build
   );
 }
 
-function ProjectCard({ project }: { project: typeof project }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group border border-primary-gray-light/50 hover:border-accent-primary/50 rounded-xl transition-all duration-300 p-6 hover:translate-y-[-4px] cursor-pointer bg-primary-gray">
       <h2 className="text-lg font-bold mb-2 group-hover:gradient-text transition-colors heading-primary font-nunito-sans">
