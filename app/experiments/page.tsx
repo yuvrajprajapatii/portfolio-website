@@ -12,8 +12,8 @@ const experiment = {
   description:
     "Quantum-inspired machine learning research using tensor network techniques. Implements Tensor Network Classifier (TNC), Quantum-Inspired Dimensionality Reduction (QIDR), and Amplitude Amplification Search (AAS) for efficient classification and data processing. Benchmarked against classical models on MNIST, Wine, and synthetic datasets with Python.",
   tech: ["Python", "NumPy", "Scikit-learn", "Tensorly", "SciPy", "Matplotlib", "Pandas", "Jupyter", "Pytest"],
-  github: "https://github.com/yuvrajprajapatii/quantum-inspired-ml-experiments",
-  website: "https://github.com/yuvrajprajapatii/quantum-inspired-ml-experiments/tree/main/notebooks",
+  github: "https://github.com/yuvrajprajapatii/quantum-inspired-ml-experiments-v2",
+  website: "https://github.com/yuvrajprajapatii/quantum-inspired-ml-experiments-v2/tree/main/notebooks",
   caseStudy: "https://yuvrajprajapati.com/experiments/quantum-inspired-ml/case-studies",
 };
 
